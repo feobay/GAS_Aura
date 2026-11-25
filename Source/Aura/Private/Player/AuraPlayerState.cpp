@@ -15,8 +15,8 @@ AAuraPlayerState::AAuraPlayerState()
 	AttributeSet = CreateDefaultSubobject<UAuraAttributeSet>("AttributeSet");
 	
 	// the frequency of Server sending data to client
-	NetUpdateFrequency = 100.f; // 100 times per second
-	
+	// NetUpdateFrequency = 100.f; // 100 times per second
+	SetNetUpdateFrequency(100.f);
 }
 
 UAbilitySystemComponent* AAuraPlayerState::GetAbilitySystemComponent() const
