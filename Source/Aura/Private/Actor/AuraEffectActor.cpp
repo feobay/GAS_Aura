@@ -30,10 +30,10 @@ void AAuraEffectActor::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActo
 		// 这里去掉const是为了学习使用，正式项目不能直接这样修改Health
 		UAuraAttributeSet* MutableAttributeSet = const_cast<UAuraAttributeSet*>(AuraAttributeSet);
 		MutableAttributeSet->SetHealth(AuraAttributeSet->GetHealth() + 25.f);
-		Destroy(); // 命中以后，摧毁这个效果(Effect)
+		Destroy(); // 碰撞以后，摧毁这个效果(Effect)
 	}
 }
-
+ 
 void AAuraEffectActor::EndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
